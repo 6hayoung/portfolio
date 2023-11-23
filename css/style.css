@@ -56,7 +56,7 @@ a{text-decoration: none;color:#000;}
 #wrap > .section > #right #profile > .profile-mid > div {width:49%; height: 425px;background:#dadada;}
 
 #wrap > .section > #right #portfolio {overflow-y:scroll;}
-#wrap > .section > #right #portfolio::-webkit-scrollbar {width:3px; background:#FFF;}
+#wrap > .section > #right #portfolio::-webkit-scrollbar {display: none;width:3px; background:#FFF;}
 #wrap > .section > #right #portfolio::-webkit-scrollbar-button {display: none;}
 #wrap > .section > #right #portfolio::-webkit-scrollbar-thumb {border-radius:10px; background:#00000056;}
 #wrap > .section > #right #portfolio > .pf-wrap {display:flex; flex-flow:row wrap;}
@@ -68,3 +68,26 @@ a{text-decoration: none;color:#000;}
 #wrap > .section > #right #portfolio > .pf-wrap > .pf-list > .pf-content > .pf-cont-tit{padding:20px 20px;}
 #wrap > .section > #right #portfolio > .pf-wrap > .pf-list > .pf-content > .pf-cont-tit > h4 {margin:0 0 10px; font-size:20px; font-weight:900;}
 #wrap > .section > #right #portfolio > .pf-wrap > .pf-list > .pf-content > .pf-cont-tit > p {display: -webkit-box; overflow:hidden; height:38px;color:#777; font-size:16px;text-overflow: ellipsis;-webkit-line-clamp: 2; -webkit-box-orient: vertical;word-break: break-word;}
+
+
+
+/* 반응형 */
+@media screen and (max-width:1400px){
+    #wrap {margin:20px;}
+    #wrap > .section {flex-flow:column nowrap;}
+    #wrap > .section > #left {width: auto;padding:10px 0 0; }
+    #wrap > .section > #left > ul {display:flex; flex-flow:row nowrap;justify-content: center;}
+    #wrap > .section > #left > ul > li {margin-right:30px;}
+    #wrap > .section > #left > ul > li.view { border-bottom:4px solid #000;}
+    #wrap > .section > #left > ul > li:last-child {margin-right:0;}
+    #wrap > .section > #left > div {display:none;}
+    #wrap > .section > #right > .slide-wrapper > div {width:auto;}
+    #wrap > .section > #right #portfolio > .pf-wrap {justify-content: space-between;}
+    #wrap > .section > #right #portfolio > .pf-wrap > .pf-list {width:32%;margin:0 0 20px!important;}
+    #wrap > .section > #right #portfolio > .pf-wrap > .pf-list > .pf-thumbnail {overflow:hidden;height:auto;}
+    #wrap > .section > #right #portfolio > .pf-wrap > .pf-list > .pf-thumbnail img{display: block;width: 100%;}
+}
+
+@media screen and (max-width:767px){
+    #wrap > .section > #right #portfolio > .pf-wrap > .pf-list {width:48%;}
+}
