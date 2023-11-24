@@ -28,8 +28,8 @@ $(function(){
             })
             $('#left > ul > li').each(function(index,el){
                 if($(el).hasClass('view')){
-                    console.log(index)
-                    $('.pc #right > .slide-wrapper').animate({top:-800*index})
+                    //console.log(index)
+                    $('.pc #right > .slide-wrapper').css({top:-800*index})
                 }
             })     
         }else{
