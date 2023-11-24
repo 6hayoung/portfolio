@@ -10,7 +10,7 @@ $(function(){
         })        
     }else{
         $('#wrap').addClass('mo').removeClass('pc')
-        $('.mo#left > ul > li').on('click',function(){
+        $('.mo #left > ul > li').on('click',function(){
             let leftIdxM = $(this).index();
                 $('.mo #right > .slide-wrapper > div').eq(leftIdxM).fadeIn().siblings().fadeOut()
         })          
