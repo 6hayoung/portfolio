@@ -74,6 +74,10 @@ a{text-decoration: none;color:#000;}
 #wrap > .section > #right #portfolio > .pf-wrap > .pf-list > .pf-content > .pf-cont-tit > p {display: -webkit-box; overflow:hidden; height:38px;color:#777; font-size:16px;text-overflow: ellipsis;-webkit-line-clamp: 2; -webkit-box-orient: vertical;word-break: break-word;}
 
 /* 기술 */
+#wrap > .section > #right #ability {overflow-y:scroll;}
+#wrap > .section > #right #ability::-webkit-scrollbar {display: none;width:3px; background:#FFF;}
+#wrap > .section > #right #ability::-webkit-scrollbar-button {display: none;}
+#wrap > .section > #right #ability::-webkit-scrollbar-thumb {border-radius:10px; background:#00000056;}
 #wrap > .section > #right #ability > .ab_list > .ab_cont > p {margin:20px 0 10px;}
 #wrap > .section > #right #ability > .ab_list > .ab_cont > .ab_cont_list {display:flex; flex-flow:row nowrap; overflow-x:scroll; overflow-y:hidden; padding:0 0 50px;}
 #wrap > .section > #right #ability > .ab_list > .ab_cont > .ab_cont_list::-webkit-scrollbar{background:#fff;}

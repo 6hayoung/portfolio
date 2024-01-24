@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form role="form" method="post" action="http://donggubat.designpix2.gethompy.com/send_mail.php" class="" id="registerForm">
+        <input type="hidden" id="to" name="to" value="info@designpix.co.kr"><!---받을이메일주소--->
+        <input type="hidden" name="subject" value="고객 문의 메일"><!---제목--->
+       <div class="contactRect">
+           <p class="tit">어떤 문의가 있으신가요?</p>
+           <select class="form-control" id="category" name="category" required >
+               <option>OEM/ODM</option>
+               <option>마케팅/제휴</option>
+               <option>CS</option>
+               <option>채용</option>
+               <option>해외영업</option>
+           </select>
+       </div>
+
+       <div class="contactRect">
+           <p class="tit">의뢰하시는 분의 정보를 알려주세요.</p>
+           <input type="text" class="form-control half" id="company" name="company" placeholder="기업명 *"  required />
+           <input type="text" class="form-control half _r" id="kind" name="kind" placeholder="업태/종목 *" required  />
+           <select class="form-control half" id="register" name="register"  required >
+               <option value="">화장품책임판매업 등록여부</option>
+               <option value="등록">등록</option>
+               <option value="미등록">미등록</option>
+           </select>
+           <input type="text" class="form-control half _r" id="wish" name="wish" placeholder="관심품목 *" required />
+           <input type="text" class="form-control half" id="name" name="name" placeholder="의뢰인 *" required  />
+           <input type="text" class="form-control half _r" id="depart" name="depart" placeholder="직급 *" required  />
+           <input type="text" class="form-control half" id="tel" name="tel" placeholder="연락처 * ('-' 없이 입력)" required  />
+           <input type="text" class="form-control half _r" id="email" name="email" placeholder="이메일 *" required  />
+       </div>
+
+       <div class="contactRect">
+           <label class="tit" for="content">문의 내용을 작성해주세요.</label>
+           <textarea class="form-control form-textarea" id="content" name="content" placeholder="이 곳에 문의 내용을 적어주세요." required ></textarea>
+       </div>
+
+       <div class="contactAgree">
+           <div class="form-rect">
+               <input type="checkbox" class="form-checkbox" id="agree_chk" name="agree_chk" value="1"  required />
+               <label for="agree_chk" class="form-label"><b>개인정보보호정책</b>에 동의합니다. *</label>
+           </div>
+       </div>
+       <div class="btnArea">
+           <input type="submit" value="문의하기" />
+       </div>
+
+   </form>
+</body>
+</html>
