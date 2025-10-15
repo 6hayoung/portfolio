@@ -29,7 +29,7 @@ a {color:inherit; text-decoration:none;}
     .intro--pic > div img {left:-35vw; margin-top:-82vw; scale:0.82 !important;}
 }
 @media screen and (max-width:631px){
-    .intro--pic > div img {left:-82vw; margin-top:-152vw; scale:0.82 !important;}
+    .intro--pic > div img {left:-45vw; margin-top:-112vw; scale:0.82 !important;}
 }
 #profile { max-width:1200px; margin:0 auto; padding:0 0 150px; text-align:center;}
 .profile--title {display:block; margin:15px auto 50px; font-size:36px; font-weight:800; line-height:1.8; }
@@ -37,13 +37,13 @@ a {color:inherit; text-decoration:none;}
 .profile--img--frame img {display:block; position:absolute; top:50%; left:50%; width:100%; transform:translate(-50%,-50%); }
 .profile--cont-detail > p {margin:150px 0 0; font-size:20px; line-height:1.7; }
 .profile--cont-detail .simple--wrap  {padding:30px; background:#000; box-sizing:border-box; border-radius:20px;}
-.profile--cont-detail .simple--wrap ul {display:flex; flex-flow:row nowrap; align-items:center; justify-content:center; gap:80px; max-width:1000px; margin:60px auto;}
+.profile--cont-detail .simple--wrap ul {display:flex; flex-flow:row wrap; align-items:center; justify-content:center; row-gap:80px; max-width:1000px; margin:60px auto;}
 .profile--cont-detail .simple--wrap ul > li {width:33.3333%; color:#FFF;}
 .profile--cont-detail .simple--wrap ul > li strong {display:block; margin:0 0 10px; font-size:28px;background: linear-gradient(to right top, #ab61ff, #ffd813); color: transparent;  -webkit-background-clip: text; }
 @media screen and (max-width:1200px){
     #profile {max-width:unset; margin:0 20px;}
-    .profile--cont-detail .simple--wrap ul {gap:5vw;}
-    .profile--cont-detail .simple--wrap ul > li {font-size:2.125vw; height:70px;}
+    .profile--cont-detail .simple--wrap ul {row-gap:8vw;}
+    .profile--cont-detail .simple--wrap ul > li {width:49%; font-size:2.125vw; height:70px;}
     .profile--cont-detail .simple--wrap ul > li strong {font-size:4.275vw;}
 }
 #movement {position:relative; width:100%; height:1600px; background:#000;}
@@ -63,6 +63,7 @@ a {color:inherit; text-decoration:none;}
     .move-mo {display:block !important; height:223vh; margin-left:-4vw !important;}
 
 }
+
 #point {padding: 50px 0 130px; color:#FFF; font-size:35px; text-align:center; background:#000;}
 /*
 .profile--bg {max-width:1200px; margin:0 auto;}
@@ -171,6 +172,4 @@ a {color:inherit; text-decoration:none;}
 
     #otherList .otherList--list li {font-size:30vw;}
 
-
 }
-
