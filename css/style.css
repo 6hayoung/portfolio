@@ -159,7 +159,8 @@ a {color:inherit; text-decoration:none;}
     #otherList .otherList--title,
     #useit .useit--title,
     #edu .edu--title,
-    #contact .contact--title {font-size:5.725vw; text-align:center;}
+    #contact .contact--title,
+    #point {font-size:5.725vw; text-align:center;}
 
     .intro--cont,
     .profile--cont-detail > p, 
@@ -174,3 +175,4 @@ a {color:inherit; text-decoration:none;}
 
 
 }
+
