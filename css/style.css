@@ -63,6 +63,7 @@ a {color:inherit; text-decoration:none;}
     .move-mo {display:block !important; height:223vh; margin-left:-4vw !important;}
 
 }
+#point {padding: 50px 0 130px; color:#FFF; font-size:35px; text-align:center; background:#000;}
 /*
 .profile--bg {max-width:1200px; margin:0 auto;}
 .profile--swiper {overflow:visible; margin:50px 0 0; }
@@ -172,3 +173,4 @@ a {color:inherit; text-decoration:none;}
 
 
 }
+
