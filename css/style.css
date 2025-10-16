@@ -1,13 +1,13 @@
-* {margin:0; padding:0; font-family:"Pretendard";  -webkit-user-select:none;  -moz-user-select:none;  -ms-user-select:none;  user-select:none }
+* {margin:0; padding:0; font-family:"Pretendard";  -webkit-user-select:none;  -moz-user-select:none;  -ms-user-select:none;  user-select:none; font-weight:300; }
 .w786 {display:none;}
 ol, ul, li {list-style: none;}
 a {color:inherit; text-decoration:none;}
 #wraps {padding:150px 0 0; }
 #intro {max-width:1200px; margin:0 auto; }
-.intro--title {display:block; font-size:32px; font-weight:800; }
-.intro--zoomit {display:block;  margin:15px 0 50px; font-size:36px; font-weight:800; line-height:1.5; }
-.intro--cont {display:block; font-size:20px; line-height:1.5; }
-.intro--cont--sub {display:block; margin:16vw 0; font-size:35px; color:#000; line-height:1.5; text-align:center; font-weight:600; opacity:0.2;}
+.intro--title {display:block; font-size:32px; font-weight:600; }
+.intro--zoomit {display:block;  margin:15px 0 50px; font-size:2.02522vw; font-weight:600; line-height:1.5; }
+.intro--cont {display:block; font-size:1.37547vw; line-height:1.5; }
+.intro--cont--sub {display:block; margin:16vw 0; font-size:2.02522vw; color:#000; line-height:1.5; text-align:center; font-weight:600; opacity:0.2;}
 
 .intro--pic {position:relative;overflow:hidden; width:1200px; height:700px; margin:50px 0 0; border-radius:20px;}
 .intro--pic > div {position:relative;}
@@ -16,14 +16,14 @@ a {color:inherit; text-decoration:none;}
 .intro--pic  span {position:absolute; right: 50px; top:50px; z-index:100; color:#FFF; font-size:74px; font-family: "Gravitas One", serif; font-weight: 400; font-style: normal; opacity:0.5;}
 
 #profile { max-width:1200px; margin:0 auto; padding:0 0 150px; text-align:center;}
-.profile--title {display:block; margin:15px auto 50px; font-size:36px; font-weight:800; line-height:1.8; }
+.profile--title {display:block; margin:15px auto 50px; font-size:2.02522vw; font-weight:600; line-height:1.8; }
 .profile--img--frame {position:relative; overflow:hidden; height:400px; margin:50px auto;border-radius:20px;  }
 .profile--img--frame img {display:block; position:absolute; top:50%; left:50%; width:100%; transform:translate(-50%,-50%); }
-.profile--cont-detail > p {margin:150px 0 0; font-size:20px; line-height:1.7; }
+.profile--cont-detail > p {margin:150px 0 0; font-size:1.37547vw; line-height:1.7; }
 .profile--cont-detail .simple--wrap  {padding:30px; background:#000; box-sizing:border-box; border-radius:20px;}
 .profile--cont-detail .simple--wrap ul {display:flex; flex-flow:row wrap; align-items:center; justify-content:center; row-gap:80px; max-width:1000px; margin:60px auto;}
 .profile--cont-detail .simple--wrap ul > li {width:33.3333%; color:#FFF;}
-.profile--cont-detail .simple--wrap ul > li strong {display:block; margin:0 0 10px; font-size:35px;background: linear-gradient(to right top, #ab61ff, #ffd813); color: transparent;  -webkit-background-clip: text; }
+.profile--cont-detail .simple--wrap ul > li strong {display:block; margin:0 0 10px; font-size:2.02522vw;background: linear-gradient(to right top, #ab61ff, #ffd813); color: transparent;  -webkit-background-clip: text; }
 @media screen and (max-width:1200px){
     #profile {max-width:unset; margin:0 20px;}
     .profile--cont-detail .simple--wrap ul {row-gap:8vw;}
@@ -37,7 +37,7 @@ a {color:inherit; text-decoration:none;}
 #movement .movement--scroll--animation img {display:block; scale:75; margin-right:-100vw;}
 .move-mo {display:none !important;}
 
-#point {padding: 16vw 0; color:#FFF; font-size:35px; line-height:1.6; text-align:center; background:#000;}
+#point {padding: 16vw 0; color:#FFF; font-size:2.02522vw; line-height:1.6; text-align:center; background:#000;}
 /*
 .profile--bg {max-width:1200px; margin:0 auto;}
 .profile--swiper {overflow:visible; margin:50px 0 0; }
@@ -46,40 +46,40 @@ a {color:inherit; text-decoration:none;}
 
 #companyList {overflow:hidden; padding:150px 0 300px; color:#FFF; text-align:center; background:#000;}
 #companyList > div {max-width:1200px; margin:0 auto; }
-#companyList .company--title {display:block; padding:15px 0 50px; font-size:36px; font-weight:800; text-align:center;}
-#companyList .company--title--detail { font-size:20px; line-height:1.7; }
+#companyList .company--title {display:block; padding:15px 0 50px; font-size:2.02522vw; font-weight:600; text-align:center;}
+#companyList .company--title--detail { font-size:1.37547vw; line-height:1.7; }
 #companyList .companySwiper {position:relative; margin:50px 0 0;}
 #companyList .companySwiper .swiper-slide {overflow:hidden; position:relative; height:500px; border-radius:20px;}
 #companyList .companySwiper .swiper-slide img {display:block; position:absolute; left:50%; top:50%; width:100%; transform:translate(-50%,-50%);}
 #companyList .companySwiper .swiper-slide a {display:inline-block; margin:15px 15px 0 0; font-size:16px; font-weight: 300; letter-spacing:0.4px; border-bottom:1px solid #eee;}
 #companyList .companySwiper .swiper-slide .hover-txt-frame {position:absolute;left:0; top:0; right:0; bottom:0; z-index:0; opacity:0; padding:50px; text-align: left; background:rgba(0, 0, 0, 0.39); transition:0.4s opacity; box-sizing:border-box;}
 #companyList .companySwiper .swiper-slide .hover-txt-frame span {display:block; font-size:18px; }
-#companyList .companySwiper .swiper-slide .hover-txt-frame .pf--name {margin:0 0 15px; font-size:36px; font-weight: 600;}
+#companyList .companySwiper .swiper-slide .hover-txt-frame .pf--name {margin:0 0 15px; font-size:2.02522vw; font-weight: 600;}
 #companyList .companySwiper .swiper-slide:hover .hover-txt-frame {z-index:1; opacity:1; transition:0.4s opacity;}
 #companyList .companySwiper .swiper-pagination {display:flex; align-items:center; justify-content:center; left:50%; bottom:-90px; width:auto; height:43px; padding:5px 15px; transform:translate(-50%,0); background:rgb(66, 66, 66); box-sizing:border-box; border-radius:50px;}
 #companyList .companySwiper .swiper-pagination .swiper-pagination-bullet {background:#FFF;}
 
 #otherList {max-width:1200px; margin:0 auto;padding:150px 0;}
-#otherList .otherList--title {display:block;  padding:15px 0; font-size:36px; font-weight:800; line-height:1.8; }
-#otherList .otherList--title--detail { max-width:1200px; margin:0 auto; font-size:20px; line-height:1.7;}
+#otherList .otherList--title {display:block;  padding:15px 0; font-size:2.02522vw; font-weight:600; line-height:1.8; }
+#otherList .otherList--title--detail { max-width:1200px; margin:0 auto; font-size:1.37547vw; line-height:1.7;}
 #otherList .otherList--list--wrap {overflow:hidden; margin:50px 0 0;}
 #otherList .otherList--list {display:flex; flex-flow:row wrap; border-top:1px solid #999;border-right:1px solid #999;}
 #otherList .otherList--list li {width:25%; padding:15px 0; color:#999; text-align:center;border:1px solid #999; box-sizing: border-box; border-right:0; border-top:0;}
 
 #useit {max-width:1200px; margin:0 auto 200px;}
-#useit .useit--title {display:block; margin:15px 0; font-size:36px; line-height:1.8; font-weight:800;}
-#useit .useit--title--detail { max-width:1200px; margin:0 auto; font-size:20px; line-height:1.7;}
+#useit .useit--title {display:block; margin:15px 0; font-size:2.02522vw; line-height:1.8; font-weight:600;}
+#useit .useit--title--detail { max-width:1200px; margin:0 auto; font-size:1.37547vw; line-height:1.7;}
 #useit .useProgram--list {display:flex; flex-flow:row nowrap; margin:50px 0 50px 25px;}
 #useit .useProgram--list > div {width:20%;}
-#useit .useProgram--list > div > span {display:block; margin:0 0 15px; font-weight:800; font-size:20px;}
+#useit .useProgram--list > div > span {display:block; margin:0 0 15px; font-weight:600; font-size:1.37547vw;}
 #useit .useProgram--list > div > ul > li {font-size:16px; line-height:2; font-weight:300; list-style:circle;}
 
 #edu {max-width:1200px; margin:0 auto 200px;}
-#edu .edu--title {display:block; margin:15px 0; font-size:36px; line-height:1.8; font-weight:800;}
-#edu .edu--title--detail { max-width:1200px; margin:0 auto; font-size:20px; line-height:1.7;}
+#edu .edu--title {display:block; margin:15px 0; font-size:2.02522vw; line-height:1.8; font-weight:600;}
+#edu .edu--title--detail { max-width:1200px; margin:0 auto; font-size:1.37547vw; line-height:1.7;}
 #contact  {margin:0 auto; padding: 200px 0 150px; color:#FFF; background:#000;}
-#contact .contact--title {display:block; max-width:1200px; margin:15px auto; font-size:36px; line-height:1; font-weight:800;}
-#contact  .clipboard-email {display:block; max-width:1200px; margin:50px auto 0; font-size:50px; font-weight:800; cursor:pointer;}
+#contact .contact--title {display:block; max-width:1200px; margin:15px auto; font-size:2.02522vw; line-height:1; font-weight:600;}
+#contact  .clipboard-email {display:block; max-width:1200px; margin:50px auto 0; font-size:2.02522vw; font-weight:600; cursor:pointer;}
 .cpImg {max-width:1200px; margin:15px auto;}
 .cpImg  img {display:block; width:450px; margin-left:-15px;}
 .toasting {position:fixed; left:50%; bottom:50px; padding:10px 15px; color:#FFF; transform:translate(-50%,0); background:#1c1c1c; border-radius:5px;}
