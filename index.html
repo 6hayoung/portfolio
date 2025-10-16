@@ -32,6 +32,7 @@
 	<script src="./js/gsap/gsap-public/minified/CustomEase.min.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><!--clipboard.js-->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script><!-- 제이쿼리 -->
+
     <script>
         //lenis smooth scrolling function
         const lenis = new Lenis()
@@ -61,14 +62,7 @@
 			//duration:800,
 			
 		})      
-		gsap.to('.otherList--list--wrap > div',{
-			scrollTrigger:{
-				trigger:'.otherList--list--wrap',
-				scrub:true,
-				//markers:true,
-			},
-			x:'-20%'
-		})        
+    
         const moveImg = $('.movement--scroll--animation > img')
             gsap.to(moveImg,{
 			scrollTrigger:{
@@ -87,10 +81,12 @@
         new Swiper('.companySwiper',{
             grabCursor:true,
             spaceBetween: 30,
+            slidesPerView:1.75,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
+            freeMode:true,
         })
         new ClipboardJS('.clipboard-email');
 
@@ -108,8 +104,8 @@
 
         $(window).on('keydown',function(e){
             if(e.keyCode == 123){
-                alert('개발자 모드 사용 불가')
-                return false;
+                //alert('개발자 모드는 지원하지 않습니다.')
+                //return false;
             }
 
         })
@@ -122,21 +118,24 @@
         <section>
             <article id="intro">
                 <div class="intro--doc">
-                    <span class="intro--title">3.5년차</span>
-                    <span class="intro--zoomit">웹 퍼블리셔 김하영</span>
-                    <p class="intro--cont">
-                        안녕하세요. <br class="br-mo" />웹에이전시에서 퍼블리싱 업무를 담당하고있는 <br class="br-mo" />웹퍼블리셔 김하영입니다.<br/>
-                        유연한 팀원과의 의사소통과 그로 인한 <br class="br-mo" />고객의 최대 만족을 이끌어내기 위해 노력합니다. <br />
-                        저의 웹 포트폴리오에 관심을 가지고 <br class="br-mo" />시간내어 방문해주신 모든 분들께 감사드립니다.
+                    <!-- <span class="intro--title">3.5년차</span> -->
+                    <span class="intro--zoomit"data-aos="fade-up" data-aos-duration="800">사용자를 이해하고, <br />UI와 UX로 경험을 디자인하는 웹 퍼블리셔</span>
+                    <p class="intro--cont"data-aos="fade-up" data-aos-duration="800">
+                        디자인과 개발의 경계를 넘나들며,<br/>
+                        사용자 중심의 UI/UX를 구현하기위해 고민하며, 효율적이고 최적화된 코드를 고민합니다.<br/>
+                        새로운 트렌드를 빠르게 흡수하고, 팀과의 협업 속에서도 정확한 구조와 감각적인 표현을 놓치지 않으려 합니다.<br/>
+                        변화하는 웹 환경 속에서 한 단계 더 진화하는 프론트엔드 개발자가 되고 싶습니다.
                     </p>
                 </div>
-                <div class="intro--pic">
+                <div class="intro--pic"data-aos="fade-up" data-aos-duration="800">
                     <div><img src="./img/img1.jpg" /><span>this<br class="w786" /> is<br class="w786" /> me.</span><img src="./img/img1-2.png" /></div>
-                   
                 </div>         
+                <div class="intro--cont--sub">
+                    <span data-aos="fade-up" data-aos-duration="800">머무르고</span><br/><br/><span data-aos="fade-up" data-aos-duration="800">탐색하고</span><br/><br/><span data-aos="fade-up" data-aos-duration="800">만족하며</span><br/><br/><span data-aos="fade-up" data-aos-duration="800">하나의 경험이 되길 바랍니다.</span>
+                </div>
             </article>
             <article id="profile">
-                <span class="profile--title">간단하게 살펴보기</span>
+                <!-- <span class="profile--title">간단하게 살펴보기</span> -->
                 <!-- <p class="intro--cont">
                     퍼블리셔로서 지낸 3.5년동안 업무는 어땠는지 정리해 보았습니다.
                 </p> -->
@@ -145,11 +144,11 @@
                     <div class="profile--cont-detail">
                         <div class="simple--wrap">
                             <ul class="simple1">
-                                <li><strong>2022.03~</strong>국비지원교육 6개월 수료</li>
+                                <li><strong>2022.03~</strong>입사일 (3.5년차)</li>
                                 <li><strong>⭐4.88</strong>협력업체 만족도 평균<br/></li>
                                 <li><strong>90+</strong>작업한 쇼핑몰 건수<br/></li>
                                 <li><strong>godo5</strong>고도몰 주력 웹에이전시 재직<br/></li>
-                                <li><strong>Library</strong>트렌디한 제이쿼리 라이브러리 사용<br/></li>
+                                <li><strong>UI/UX</strong>더 나은 사용경험을 위해<br/></li>
                                 <li><strong>Ability</strong>여러 프로그램 사용 가능<br/></li>
                             </ul>
 
@@ -190,9 +189,9 @@
                     </div>
                 </div>
             </article>
-            <article id="point">
+            <!-- <article id="point">
                 더 나은 UX를 위해<br />항상 고민합니다.
-            </article>
+            </article> -->
             <article id="companyList">
                 <div class="company--wraps">
                     <span class="company--title">작업 포트폴리오</span>
@@ -202,17 +201,127 @@
                     <div class="company--list companySwiper">
                         <div class="swiper-pagination"></div>
                         <ul class="swiper-wrapper">
-                            <li class="swiper-slide"><div class="swiper-img-frame"><img src="./img/pf_9.jpg" /><a href="https://www.donggubat.co.kr/" target="_blank"><strong>동구밭</strong></a></div></li>
-                            <li class="swiper-slide"><div class="swiper-img-frame"><img src="./img/pf_1.jpg" /><a href="https://www.dhuman.co.kr/" target="_blank"><strong>듀먼</strong></a></div></li>
-                            <li class="swiper-slide"><div class="swiper-img-frame"><img src="./img/pf_2.jpg" /><a href="https://www.mckayson.com/" target="_blank"><strong>맥케이슨</strong></a></div></li>
-                            <li class="swiper-slide"><div class="swiper-img-frame"><img src="./img/pf_7.jpg" /><a href="https://bevercitymarket.com/" target="_blank"><strong>베버시티마켓</strong></a></div></li>
-                            <li class="swiper-slide"><div class="swiper-img-frame"><img src="./img/pf_3.jpg" /><a href="https://www.balmuda.co.kr/" target="_blank"><strong>발뮤다</strong></a></div></li>
-                            <li class="swiper-slide"><div class="swiper-img-frame"><img src="./img/pf_4.jpg" /><a href="https://www.vermicular.co.kr/" target="_blank"><strong>버미큘라</strong></a></div></li>
-                            <li class="swiper-slide"><div class="swiper-img-frame"><img src="./img/pf_5.jpg" /><a href="https://www.celimax.co.kr/" target="_blank"><strong>셀리맥스</strong></a></div></li>
-                            <li class="swiper-slide"><div class="swiper-img-frame"><img src="./img/pf_10.jpg" /><a href="https://www.yagooshop.com/" target="_blank"><strong>스타디움샵</strong></a></div></li>
-                            <li class="swiper-slide"><div class="swiper-img-frame"><img src="./img/pf_6.jpg" /><a href="https://www.spectrababy.co.kr/" target="_blank"><strong>스펙트라</strong></a></div></li>
-                            <li class="swiper-slide"><div class="swiper-img-frame"><img src="./img/pf_11.jpg" /><a href="https://www.smile24.kr/" target="_blank"><strong>스마일24</strong></a></div></li>
-                            <li class="swiper-slide"><div class="swiper-img-frame"><img src="./img/pf_8.jpg" /><a href="https://hslcmall.kr/" target="_blank"><strong>홍성축협 하나로마트</strong></a></div></li>
+                            <li class="swiper-slide">
+                                <div class="swiper-img-frame">
+                                    <img src="./img/pf_9.jpg" />
+                                    <div class="hover-txt-frame">
+                                        <span class="pf--name">동구밭</span>
+                                        <span>스크립트 유지보수 · 이벤트 페이지 제작 · 프론트엔드</span>
+                                        <a href="https://www.donggubat.co.kr/" target="_blank">Shop</a>
+                                        <a href="javascript:void(0);" target="_blank">Notion</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="swiper-img-frame">
+                                    <img src="./img/pf_1.jpg" />
+                                    <div class="hover-txt-frame">
+                                        <span class="pf--name">듀먼</span>
+                                        <span>리뉴얼 · PHP · 프론트엔드 · 유지보수 · UX · 패치</span>
+                                        <a href="https://www.dhuman.co.kr/" target="_blank">Shop</a>
+                                        <a href="javascript:void(0);" target="_blank">Notion</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="swiper-img-frame">
+                                    <img src="./img/pf_2.jpg" />
+                                    <div class="hover-txt-frame">
+                                        <span class="pf--name">맥케이슨</span>
+                                        <span>신규오픈작업 · 프론트엔드</span>
+                                        <a href="https://www.mckayson.com/" target="_blank">Shop</a>
+                                        <a href="javascript:void(0);" target="_blank">Notion</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="swiper-img-frame">
+                                    <img src="./img/pf_7.jpg" />
+                                    <div class="hover-txt-frame">
+                                        <span class="pf--name">베버시티마켓</span>
+                                        <span>리뉴얼작업 · 프론트엔드 · PHP · 패치</span>
+                                        <a href="https://bevercitymarket.com/" target="_blank">Shop</a>
+                                        <a href="javascript:void(0);" target="_blank">Notion</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="swiper-img-frame">
+                                    <img src="./img/pf_3.jpg" />
+                                    <div class="hover-txt-frame">
+                                        <span class="pf--name">발뮤다</span>
+                                        <span>프론트엔드 · PHP</span>
+                                        <a href="https://www.balmuda.co.kr/" target="_blank">Shop</a>
+                                        <a href="javascript:void(0);" target="_blank">Notion</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="swiper-img-frame">
+                                    <img src="./img/pf_4.jpg" />
+                                    <div class="hover-txt-frame">
+                                        <span class="pf--name">버미큘라</span>
+                                        <span>퍼블리싱 · 하드코딩 · 해외 라이브러리</span>
+                                        <a href="https://www.vermicular.co.kr/" target="_blank">Shop</a>
+                                        <a href="javascript:void(0);" target="_blank">Notion</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="swiper-img-frame">
+                                    <img src="./img/pf_5.jpg" />
+                                    <div class="hover-txt-frame">
+                                        <span class="pf--name">셀리맥스</span>
+                                        <span>프론트엔드</span>
+                                        <a href="https://www.celimax.co.kr/" target="_blank">Shop</a>
+                                        <a href="javascript:void(0);" target="_blank">Notion</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="swiper-img-frame">
+                                    <img src="./img/pf_10.jpg" />
+                                    <div class="hover-txt-frame">
+                                        <span class="pf--name">스타디움샵</span>
+                                        <span>유지보수 · 패치 · 프론트엔드</span>
+                                        <a href="https://www.celimax.co.kr/" target="_blank">Shop</a>
+                                        <a href="javascript:void(0);" target="_blank">Notion</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="swiper-img-frame">
+                                    <img src="./img/pf_6.jpg" />
+                                    <div class="hover-txt-frame">
+                                        <span class="pf--name">스펙트라</span>
+                                        <span> 유지보수 · 프론트엔드 · 패치</span>
+                                        <a href="https://www.spectrababy.co.kr/" target="_blank">Shop</a>
+                                        <a href="javascript:void(0);" target="_blank">Notion</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="swiper-img-frame">
+                                    <img src="./img/pf_11.jpg" />
+                                    <div class="hover-txt-frame">
+                                        <span class="pf--name">스마일24</span>
+                                        <span>PHP · 프론트엔드</span>
+                                        <a href="https://www.smile24.kr/" target="_blank">Shop</a>
+                                        <a href="javascript:void(0);" target="_blank">Notion</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="swiper-img-frame">
+                                    <img src="./img/pf_8.jpg" />
+                                    <div class="hover-txt-frame">
+                                        <span class="pf--name">홍성축협 하나로마트</span>
+                                        <span>신규오픈작업 · PHP · 프론트엔드</span>
+                                        <a href="https://hslcmall.kr/" target="_blank">Shop</a>
+                                        <a href="javascript:void(0);" target="_blank">Notion</a>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <div class="company--cont"></div>
@@ -220,113 +329,62 @@
             </article>          
             <article id="otherList">
                 <span class="otherList--title">이 외에도</span>
-                <p class="otherList--title--detail">대규모 작업은 아니지만 다양한 업체의 스크립트, 디자인 등<br/>유지보수를 도맡아 작업하며 많은 경험을 쌓고 있습니다.<br/>운영을 중단한 쇼핑몰이 많지만 저의 기록에 쌓이고 있습니다.</p>
+                <p class="otherList--title--detail">다양한 업체의 스크립트, 퍼블리싱유지보수를 맡아가며 많은 경험을 쌓고 있습니다.<br/>운영을 중단한 쇼핑몰이 많지만 저의 경험은 계속해서 쌓이고 있습니다.</p>
                 <div class="otherList--list--wrap">
                     <div>
                         <ul class="otherList--list">
-                        <li>1키로커피</li>
-                        <li>ad646</li>
-                        <li>가인성형외과</li>
-                        <li>골든벨금속</li>
-                        <li>네오툴</li>
-                        <li>넥시스코어</li>
-                        <li>뉴태리</li>
-                        <li>대상주방</li>
-                        <li>디오니헬스케어</li>
-                        <li>랩원오원</li>
-                        <li>메타센테라뷰틱스</li>
-                        <li>뮤제오</li>
-                        <li>미스터네이처</li>
-                        <li>바로닥터</li>
-                        <li>바른컴</li>
-                        <li>보다티</li>
-                        <li>비이비</li>
-                        <li>비알레띠</li>
-                        <li>수지매트</li>
-                        <li>써밋퍼니처</li>
+                        <li>1키*커피</li>
+                        <li>ad*6</li>
+                        <li>가인*외과</li>
+                        <li>골든벨*속</li>
+                        <li>네*툴</li>
+                        <li>넥시*코어</li>
+                        <li>뉴태*</li>
+                        <li>대*주방</li>
+                        <li>디오*헬스케어</li>
+                        <li>랩*오원</li>
+                        <li>메타센테*뷰틱스</li>
+                        <li>뮤*오</li>
+                        <li>미스*네이처</li>
+                        <li>바*닥터</li>
+                        <li>바른*</li>
+                        <li>보*티</li>
+                        <li>비*비</li>
+                        <li>비*레띠</li>
+                        <li>수*매트</li>
+                        <li>써밋*니처</li>
                         <li>아름다운가게</li>
-                        <li>아이스쿨티</li>
-                        <li>아이언맥스</li>
-                        <li>안전한세상</li>
-                        <li>영광화성굴비</li>
-                        <li>영동프라텍</li>
-                        <li>예스프린텍</li>
-                        <li>오늘장사</li>
-                        <li>요리버리</li>
-                        <li>우리메디</li>
-                        <li>우리황토</li>
-                        <li>웰튠</li>
-                        <li>일온스</li>
-                        <li>임마누엘</li>
-                        <li>제자마을</li>
-                        <li>지엔인터내셔널</li>
-                        <li>커피스퀘어</li>
-                        <li>컨비젼</li>
-                        <li>코스트펫</li>
-                        <li>태진인테리어</li>
-                        <li>티원아이텍</li>
-                        <li>펫스토리</li>
-                        <li>프리덤</li>
-                        <li>한국공예진흥원</li>
-                        <li>현동몰</li>
-                        <li>호정식품</li>
-                        <li>홍문관서적</li>
-                        <li>휴메딕스</li>
-                        <li>휴온스글로벌</li>
-                        <li>힘찬닥터스</li>
-                        <li>등</li>
-
-                        <li>1키로커피</li>
-                        <li>ad646</li>
-                        <li>가인성형외과</li>
-                        <li>골든벨금속</li>
-                        <li>네오툴</li>
-                        <li>넥시스코어</li>
-                        <li>뉴태리</li>
-                        <li>대상주방</li>
-                        <li>디오니헬스케어</li>
-                        <li>랩원오원</li>
-                        <li>메타센테라뷰틱스</li>
-                        <li>뮤제오</li>
-                        <li>미스터네이처</li>
-                        <li>바로닥터</li>
-                        <li>바른컴</li>
-                        <li>보다티</li>
-                        <li>비이비</li>
-                        <li>비알레띠</li>
-                        <li>수지매트</li>
-                        <li>써밋퍼니처</li>
-                        <li>아름다운가게</li>
-                        <li>아이스쿨티</li>
-                        <li>아이언맥스</li>
-                        <li>안전한세상</li>
-                        <li>영광화성굴비</li>
-                        <li>영동프라텍</li>
-                        <li>예스프린텍</li>
-                        <li>오늘장사</li>
-                        <li>요리버리</li>
-                        <li>우리메디</li>
-                        <li>우리황토</li>
-                        <li>웰튠</li>
-                        <li>일온스</li>
-                        <li>임마누엘</li>
-                        <li>제자마을</li>
-                        <li>지엔인터내셔널</li>
-                        <li>커피스퀘어</li>
-                        <li>컨비젼</li>
-                        <li>코스트펫</li>
-                        <li>태진인테리어</li>
-                        <li>티원아이텍</li>
-                        <li>펫스토리</li>
-                        <li>프리덤</li>
-                        <li>한국공예진흥원</li>
-                        <li>현동몰</li>
-                        <li>호정식품</li>
-                        <li>홍문관서적</li>
-                        <li>휴메딕스</li>
-                        <li>휴온스글로벌</li>
-                        <li>힘찬닥터스</li>
-                        <li>등</li>
+                        <li>아이스*티</li>
+                        <li>아*언맥스</li>
+                        <li>안전*세상</li>
+                        <li>영광화**비</li>
+                        <li>영동*라텍</li>
+                        <li>예*프린텍</li>
+                        <li>오*장사</li>
+                        <li>요리버*</li>
+                        <li>우리*디</li>
+                        <li>우*황토</li>
+                        <li>웰*</li>
+                        <li>일온*</li>
+                        <li>임*누엘</li>
+                        <li>제자*을</li>
+                        <li>지*터내셔널</li>
+                        <li>커피*퀘어</li>
+                        <li>컨비*</li>
+                        <li>코스트*</li>
+                        <li>태진*테리어</li>
+                        <li>티*아이텍</li>
+                        <li>펫스*리</li>
+                        <li>프*덤</li>
+                        <li>한국공*진흥원</li>
+                        <li>현*몰</li>
+                        <li>호정*품</li>
+                        <li>홍*관서적</li>
+                        <li>휴메*스</li>
+                        <li>휴온스*로벌</li>
+                        <li>힘찬*터스</li>
+                        <li>이외 폐쇄몰 등</li>
+                        <li></li>
                         </ul>
                     </div>
                 </div>
@@ -386,6 +444,12 @@
                     이 경험을 토대로 최근에는 외국 포럼에도<br class="br-mo"/> 관심을 기울이고 학습하고 있습니다.
                 </p>
             </article>
+            <article id="career">
+                <span class="edu--title"></span>
+                <p class="edu--title--detail">
+                    커리어작성
+                </p>
+            </article>            
             <article id="contact">
                 <span class="contact--title">연락하기</span>
                 <a class="clipboard-email" data-clipboard-text="6yue@kakao.com">6yue@kakao.com</a>
@@ -396,5 +460,9 @@
         </section>        
     </div>
 </body>
-
 </html>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
